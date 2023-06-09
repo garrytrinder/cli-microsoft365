@@ -30,10 +30,6 @@ RUN apt-get update && apt-get install -y \
   && apt-get install nodejs -y \
   && rm -rf /var/lib/apt/lists/*
 
-COPY ../docs/pip_requirements.txt .
-
-RUN pip install -r pip_requirements.txt
-
 RUN useradd \
   --user-group \
   --system \
